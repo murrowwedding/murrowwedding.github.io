@@ -15,3 +15,11 @@ alert("hello!");
     $('body').css('background-image', 'linear-gradient(rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.8)), url('+backgrounds[bgNumber].image+')');
   }
 });
+
+function getRandomBg() {
+  return getRandomInt(0, backgrounds.length-1);
+}
+
+function getRandomInt (min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
