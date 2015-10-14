@@ -1,3 +1,4 @@
+
 /* Cycling background image ---------------------- */
 body {
   /*background-image: url('../images/photo1.jpg');*/
@@ -5,6 +6,32 @@ body {
   background-position: center center;
   background-size: cover;
 }
+
+/* Header font centering */
+
+.cover-heading {
+  text-align: center;
+}
+
+/* cover page spacer */
+@media (min-width: 768px) {
+  .spacer {
+    height: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .spacer {
+    height: 100px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .spacer {
+    height: 200px;
+  }
+}
+
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -36,16 +63,4 @@ body > .container {
 .footer > .container {
   padding-right: 15px;
   padding-left: 15px;
-}
-
-code {
-  font-size: 80%;
-}
-
-/* Custom hr
-Gradient transparent - color - transparent */
-.hr-custom {
-  border: 0;
-  height: 2px;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
 }
