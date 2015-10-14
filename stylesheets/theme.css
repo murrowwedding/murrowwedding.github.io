@@ -24,10 +24,6 @@ h6 {
 
 /* Colors */
 
-/*
- * =========== Theme stuff ===========
- */
-
 body {
   color: #fff;
   /*text-shadow: 0 1px 3px rgba(0,0,0,.5);*/
@@ -42,6 +38,7 @@ body {
 .navbar-default {
   background-color: transparent;
   border: 0px;
+  font-size: 150%;
 }
 
 .navbar-default .navbar-nav > .active > a,
@@ -74,6 +71,7 @@ body {
 .navbar-default .navbar-brand,
 .navbar-default .navbar-brand:hover {
   color: #fff;
+  font-size: 150%;
 }
 
 /*
@@ -97,7 +95,7 @@ a:hover {
 }
 
 /* Custom hr
-Gradient transparent - color - transparent */
+Gradient: transparent - color - transparent */
 .hr-custom {
   border: 0;
   height: 2px;

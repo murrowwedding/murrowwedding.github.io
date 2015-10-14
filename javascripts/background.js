@@ -1,23 +1,24 @@
-var pic1 = '../images/photo1.jpg';
-var pic2 = '../images/photo2.jpg';
-var pic3 = '../images/photo3.jpg';
-var backgrounds = [{image: pic1}, {image: pic2}, {image: pic3}];
-var bgNumber = getRandomBg();
+var numPics = 14;
+var pics = [];
+for (i = 0; i < numPics; i++)
+{
+  pics[i] = '../images/photo' + (i+1) + '.jpg';
+}
+var bgNumber = getRandomBg(numPics);
 
 $(document).ready(function() {
-  
   if($('body').hasClass('index'))
   {
-    $('body').css('background-image', 'url('+backgrounds[bgNumber].image+')');
+    $('body').css('background-image', 'url('+pics[bgNumber]+')');
   }
   else
   {
-    $('body').css('background-image', 'linear-gradient(rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.8)), url('+backgrounds[bgNumber].image+')');
+    $('body').css('background-image', 'linear-gradient(rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.8)), url('+pics[bgNumber]+')');
   }
 });
 
-function getRandomBg() {
-  return getRandomInt(0, backgrounds.length-1);
+function getRandomBg(numPics) {
+  return getRandomInt(0, numPics-1);
 }
 
 function getRandomInt (min, max) {
