@@ -5,7 +5,7 @@ var backgrounds = [{image: pic1}, {image: pic2}, {image: pic3}];
 var bgNumber = getRandomBg();
 
 $(document).ready(function() {
-
+alert("hello!");
   if($('body').hasClass('index'))
   {
     $('body').css('background-image', 'url('+backgrounds[bgNumber].image+')');
