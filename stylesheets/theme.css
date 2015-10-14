@@ -1,0 +1,21 @@
+html,
+body {
+  font-family: 'Raleway', serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Berkshire Swash', serif;
+}
+
+.header-font {
+  font-family: 'Berkshire Swash', serif;
+}
+
+.body-font {
+  font-family: 'Raleway', serif;
+}

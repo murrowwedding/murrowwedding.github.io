@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{{baseurl}}/stylesheets/bootstrap.min.css" />
+    <link rel="stylesheet" href="{{baseurl}}/stylesheets/site.css" />
+    <link rel="stylesheet" href="{{baseurl}}/stylesheets/theme.css" />
+    <link href='http://fonts.googleapis.com/css?family=Quando|Courgette' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway|Berkshire+Swash' rel='stylesheet' type='text/css'>
+
+    <script type="javascript" src="{{baseurl}}/javascripts/jquery-1.11.3.min.js"></script>
+    <script type="javascript" src="{{baseurl}}/javascripts/bootstrap.min.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script type="javascript" src="{{baseurl}}/javascripts/background.js"></script>
+  </head>
+  <body class="index">
+    {% include navbar.html %}
+
+    <div class="container">
+      {{content}}
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+           <div class="col-sm-6">
+             <p>&copy; 2015, Murrows</p>
+           </div>
+           <div class="col-sm-6">
+             <p>Questions? <a href="www.murrowwedding@gmail.com">Email us.</a></p>
+           </div>
+         </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
