@@ -36,7 +36,8 @@ body {
 }
 
 .navbar-default {
-  background-color: transparent;
+  /*background-color: transparent;*/
+  background-color: rgba(0,0,0,.5);
   border: 0px;
   font-size: 150%;
 }
@@ -81,7 +82,8 @@ body {
 .footer {
   color: #999; /* IE8 proofing */
   color: rgba(255,255,255,.5);
-  background-color: transparent;
+  /*background-color: transparent;*/
+  background-color: rgba(0,0,0,.5);
 }
 
 /* Links */
