@@ -17,7 +17,7 @@
     <script src="http://maps.googleapis.com/maps/api/js"></script>
     <script type="text/javascript" src="{{baseurl}}/javascripts/background.js"></script>
   </head>
-  <body class="index">
+  <body class={% if {{page.title}} contains 'Murrow' %}index{%else%}other{%endif%}>
     {% include navbar.html %}
 
     <div class="container">
