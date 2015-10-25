@@ -1,4 +1,20 @@
 
+.test {
+  text-align: center;
+}
+
+.registry-img {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  border: 0px;
+}
+
+.registry-img:hover {
+  border-bottom: 2px solid #fff;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+
 /* Cycling background image ---------------------- */
 body {
   /*background-image: url('../images/photo1.jpg');*/
