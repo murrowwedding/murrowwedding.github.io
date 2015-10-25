@@ -2,3 +2,5 @@ markdown: redcarpet
 baseurl: /
 exclude: ['README.md']
 permalink: pretty
+encoding: utf-8
+highlighter: rouge
