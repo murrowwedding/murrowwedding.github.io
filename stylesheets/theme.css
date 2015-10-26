@@ -36,7 +36,7 @@ body {
 }
 
 .navbar-default {
-  background-color: rgba(0,0,0,.5);
+  background-color: #333;
   border: 0px;
   font-size: 150%;
 }
