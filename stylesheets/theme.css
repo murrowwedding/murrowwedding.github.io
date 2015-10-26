@@ -36,17 +36,9 @@ body {
 }
 
 .navbar-default {
-  background-color: #333;
+  background-color: transparent;
   border: 0px;
   font-size: 150%;
-}
-
-@media (min-width: 992px) {
-  .navbar-default {
-    background-color: transparent;
-    border: 0px;
-    font-size: 150%;
-  }
 }
 
 .navbar-default .navbar-nav > .active > a,
@@ -54,17 +46,38 @@ body {
 .navbar-default .navbar-nav > .active:focus > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  background-color: transparent;
+  background-color: #333;
   color: #fff;
   border-bottom: 1px solid #fff;
   border-bottom-color: #fff;
 }
 
+@media (min-width: 992px) {
+  .navbar-default .navbar-nav > .active > a,
+  .navbar-default .navbar-nav > .active:hover > a,
+  .navbar-default .navbar-nav > .active:focus > a,
+  .navbar-default .navbar-nav > .active > a:hover,
+  .navbar-default .navbar-nav > .active > a:focus {
+    background-color: transparent;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    border-bottom-color: #fff;
+  }
+}
+
 .navbar-default .navbar-nav > li > a {
   color: #fff;  /* IE8 proofing */
   color: rgba(255,255,255,.75);
-
+  background-color: #333;
 }
+
+@media (min-width: 992px) {
+  .navbar-default .navbar-nav > li > a {
+    color: #fff;  /* IE8 proofing */
+    color: rgba(255,255,255,.75);
+    background-color: transparent;
+    }
+  }
 
 .navbar-default .navbar-nav > li:hover > a
 .navbar-default .navbar-nav > li:focus > a,
