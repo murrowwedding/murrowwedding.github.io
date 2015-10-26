@@ -1,18 +1,22 @@
-var numPics = 14;
+var numPicsTotal = 9;
+var numPicsIndex = 6;
 var pics = [];
-for (i = 0; i < numPics; i++)
+for (i = 0; i < numPicsTotal; i++)
 {
   pics[i] = '../images/photo' + (i+1) + '.jpg';
 }
-var bgNumber = getRandomBg(numPics);
+
+var bgNumber;
 
 $(document).ready(function() {
   if($('body').hasClass('index'))
   {
+    bgNumber = getRandomBg(numPicsIndex);
     $('body').css('background-image', 'url('+pics[bgNumber]+')');
   }
   else
   {
+    bgNumber = getRandomBg(numPicsTotal);
     $('body').css('background-image', 'linear-gradient(rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.8)), url('+pics[bgNumber]+')');
   }
 });

@@ -30,17 +30,19 @@
       {{content}}
     </div>
 
+    {% unless {{page.title}} contains 'Murrow' %}
     <footer class="footer">
       <div class="container">
         <div class="row">
            <div class="col-sm-6">
-             <p>&copy; 2015, Murrows</p>
+             <p>Created by us &lt;3</p>
            </div>
            <div class="col-sm-6">
              <p>Questions? <a href="mailto:murrowwedding@gmail.com?subject=Feedback">Email us.</a></p>
            </div>
          </div>
       </div>
+      {% endunless %}
     </footer>
   </body>
 </html>
