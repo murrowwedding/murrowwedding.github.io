@@ -20,6 +20,12 @@
   <body class={% if {{page.title}} contains 'Murrow' %}index{%else%}other{%endif%}>
     {% include navbar.html %}
 
+    {% unless {{page.title}} contains 'Murrow' %}
+    <div class="spacer">
+    </div>
+    <h1 class="cover-heading">{{page.title}}</h1>
+    <hr class="hr-custom">
+    {% endunless %}
     <div class="container">
       {{content}}
     </div>

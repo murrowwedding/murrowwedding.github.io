@@ -2,13 +2,16 @@
 layout: default
 title: Our Story
 ---
-<div class="spacer">
-</div>
+
 <div class="row test">
   <div class="col-md-12">
-    <h1>His Side of the Story</h1>
-    <p>Tanya impressed me and then she hated me and then she dated me.</p>
-    <h1>Her Side of the Story</h1>
-    <p>Everything he said is a lie...</p>
+    {% for story in {{site.posts}} reversed %}
+    <p>Title: {{story.title}}
+    Place: {{story.place}}
+    Date: {{story.event-date}}</p>
+    <p>
+    {{story.content}}
+    </p>
+    {%endfor%}
   </div>
 </div>
