@@ -14,8 +14,6 @@ $(document).ready(function() {
     localStorage.removeItem("otherGuests");
     localStorage.removeItem("notes");
     localStorage.removeItem("date");
-
-    window.location.reload(false);
   });
 });
 
