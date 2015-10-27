@@ -80,8 +80,10 @@ function checkRecord()
     $("#numRec").attr("value", localStorage.numReception);
     $("#otherGuests").attr("placeholder", localStorage.otherGuests);
     $("#notes").attr("placeholder", localStorage.notes);
+    $('#submit-rsvp').html("Update RSVP");
     $('.delete-form').css('display','inline');
   } else {
+    $('#submit-rsvp').html("Submit RSVP");
     $('.delete-form').css('display','none');
   }
 }
