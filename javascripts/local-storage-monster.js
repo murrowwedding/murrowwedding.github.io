@@ -23,7 +23,7 @@ function writeRecord()
   var lastName = $("#lname").val();
   var areTheyComing = (($('#rsvp-yes > .glyphicon').hasClass('glyphicon-check')) ? 1 : 0);
   var numWedding = $("#numWed").val();
-  var numReception = numWedding; //change this later
+  var numReception = $("#numRec").val();
   var otherGuests = $("#otherGuests").val();
   var notes = $("#notes").val();
 
@@ -77,7 +77,7 @@ function checkRecord()
       yesCheckbox.removeClass('glyphicon-check');
     }
     $("#numWed").attr("value", localStorage.numWedding);
-    //$("#numRec").attr("value", localStorage.numReception); THIS NEEDS TO BE IMPLEMENTED
+    $("#numRec").attr("value", localStorage.numReception);
     $("#otherGuests").attr("placeholder", localStorage.otherGuests);
     $("#notes").attr("placeholder", localStorage.notes);
     $('.delete-form').css('display','inline');
