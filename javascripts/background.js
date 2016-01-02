@@ -3,7 +3,7 @@ var numPicsIndex = 6;
 var pics = [];
 for (i = 0; i < numPicsTotal; i++)
 {
-  pics[i] = '../images/photo' + (i+1) + '.webp';
+  pics[i] = '../images/photo' + (i+1) + '.jpg';
 }
 
 var bgNumber;
