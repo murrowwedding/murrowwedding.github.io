@@ -11,17 +11,15 @@
     <link href='http://fonts.googleapis.com/css?family=Quando|Courgette' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway|Berkshire+Swash' rel='stylesheet' type='text/css'>
 
-    <!-- <script type="text/javascript" src="{{baseurl}}/javascripts/jquery-1.11.3.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" src="{{baseurl}}/javascripts/bootstrap.min.js"></script>
+    
     <script src="http://maps.googleapis.com/maps/api/js"></script>
     <script type="text/javascript" src="{{baseurl}}/javascripts/background.js"></script>
-
-    <!--<script type="text/javascript" src="modernizr.min.js"></script>-->
+    <script type="text/javascript" src="{{baseurl}}/javascripts/map.js"></script>
     <script type="text/javascript" src="https://mandrillapp.com/api/docs/js/mandrill.js"></script>
     <script type="text/javascript" src="{{baseurl}}/javascripts/send-email.js"></script>
     <script type="text/javascript" src="{{baseurl}}/javascripts/rsvp.js"></script>
-    <!--<script type="text/javascript" src="{{baseurl}}/javascripts/local-storage-monster.js"></script>-->
     <script type="text/javascript" src="{{baseurl}}/javascripts/local-storage-monster.js"></script>
 
   </head>
@@ -34,6 +32,7 @@
     <h1 class="cover-heading">{{page.title}}</h1>
     <hr class="hr-custom">
     {% endunless %}
+
     <div class="container">
       {{content}}
     </div>
@@ -50,7 +49,8 @@
            </div>
          </div>
       </div>
-      {% endunless %}
     </footer>
+    {% endunless %}
+
   </body>
 </html>
