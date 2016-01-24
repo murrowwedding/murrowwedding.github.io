@@ -2,8 +2,34 @@
   <div class="col-md-6">
     <div id="map"></div>
   </div>
-  <div class="col-md=6">
+  <div class="col-md-6">
     <h2>Directions</h2>
-    
+
+    <div class="form-horizontal">
+      <div class="form-group">
+        <div class="input-group">
+          <span class="input-group-addon">To:</span>
+          <div class="form-control text-left truncate">
+            Bethany First Church of the Nazarene
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon">From:</span>
+        <select id="start" onchange="calcRoute();" class="form-control selectpicker">
+          <option value="oklahoma city, ok">Oklahoma City, OK</option>
+          <option value="allen, tx">Allen, TX</option>
+          <option value="corpus christi, tx">Corpus Christi, TX</option>
+          <option value="greenville, tx">Greenville, TX</option>
+          <option value="nashville, tn">Nashville, TN</option>
+          <option value="rockdale, tx">Rockdale, TX</option>
+          <option value="van alstyne, tx">Van Alstyne, TX</option>
+        </select>
+      </div>
+    </div>
+
   </div>
 </div>
