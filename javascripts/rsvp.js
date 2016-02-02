@@ -24,7 +24,6 @@ $(document).ready(function() {
     alert("RSVPed! Thanks.");
   });
 
-  var guestNames = $('#guest-names');
   var receptionSome = $('#reception-some');
 
   // Number input code
@@ -81,11 +80,9 @@ $(document).ready(function() {
           $(this).val($(this).data('oldValue'));
       }
       if(valueCurrent > 1) {
-        guestNames.collapse('show');
         receptionSome.collapse('show');
       }
       else {
-        guestNames.collapse('hide');
         receptionSome.collapse('hide');
       }
   });

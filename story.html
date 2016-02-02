@@ -5,13 +5,23 @@ title: Our Story
 
 <div class="row test">
   <div class="col-md-12">
-    {% for story in {{site.posts}} reversed %}
-    <p>Title: {{story.title}}
-    Place: {{story.place}}
-    Date: {{story.event-date}}</p>
-    <p>
-    {{story.content}}
-    </p>
-    {%endfor%} 
+
+    <ul class="timeline">
+      {% for story in {{site.posts}} reversed %}
+      <li>
+        <div class="timeline-badge success"><span class="glyphicon glyphicon-heart-empty"></span></div>
+        <div class="timeline-panel">
+          <div class="timeline-heading">
+            <h3 class="timeline-title">{{story.title}} <small class="text-muted"></small></h3>
+            <p>{{story.place}}<br><small class="text-muted"><span class="glyphicon glyphicon-calendar"></span> {{story.event-date}}</small></p>
+          </div>
+          <div class="timeline-body">
+            <p>{{story.content}}</p>
+          </div>
+        </div>
+      </li>
+      {%endfor%}
+    </ul>
+
   </div>
 </div>

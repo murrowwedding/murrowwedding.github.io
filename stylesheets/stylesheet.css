@@ -1,3 +1,27 @@
+
+/* Other */
+
+.text-fluid {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .text-fluid {
+    text-align: left;
+  }
+}
+
+.show-map {
+  cursor: pointer;
+}
+
+#reset-map {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+/* ---- */
+
 .form-horizontal .form-group {
   margin-left: 0;
   margin-right: 0;
@@ -166,6 +190,10 @@ body > .container {
 
 .btn-default:hover,
 .btn-default:focus,
+.btn-default:active,
+.btn-default:hover:focus,
+.btn-default:active:focus,
+.btn-default:active:hover,
 .btn-default.active{
   color: #fff;
   text-shadow: none; /* Prevent inheritence from `body` */
@@ -173,7 +201,10 @@ body > .container {
   border: 1.5px solid #fff;
 }
 
-.btn-default:disabled {
+.btn-default:disabled,
+.btn-default.disabled,
+ .btn-default[disabled],
+ .btn-default[disabled]:hover{
   color: #ccc;
   text-shadow: none; /* Prevent inheritence from `body` */
   background-color: #444;
