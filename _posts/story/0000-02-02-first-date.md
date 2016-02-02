@@ -1,5 +1,6 @@
 ---
-title: First Met
-place: ACM Programming Competition Practice
-event-date: October 2012
+title: First Date
+place: Johnny Carino's
+event-date: February 2013
+inverted: True
 ---
