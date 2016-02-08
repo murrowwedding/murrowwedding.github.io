@@ -3,25 +3,90 @@ layout: default
 title: Our Story
 ---
 
-<div class="row test">
-  <div class="col-md-12">
+<div class="row">
 
+  <div class="col-md-6 text-center">
+    <h2>The Groom</h2>
+    <img src="{{baseurl}}/images/corbin-face.png" class="img-circle img-responsive center-block face-corbin">
+    <p></p>
+  </div>
+
+  <div class="col-md-6 text-center">
+    <h2>The Bride</h2>
+    <img src="{{baseurl}}/images/tanya-face.png" class="img-circle img-responsive center-block face-tanya">
+    <p>Tanya is studying Computer Science at Oklahoma Christian University. Her hobbies include playing video games, D&amp;D, and board games, as well as drawing and painting. She loves Lord of the Rings, and loves Star Wars only slightly less.</p>
+
+    <div>
+      <h3>First Met</h3>
+      <p>After doing the UIL programming competitions in high school, I was interested in the ACM programming competition that OC participated in. </p>
+    </div>
+
+    <div>
+      <h3>Proposal</h3>
+      <p>It was our 2-year annivarsary, and Corbin said we could have a picnic at the park. He brought me there, but hadn't brought any food! We walked and talked around one of the trails, and all the while I kept asking where our food was (I was starving, of course). When we got around to the pond, I saw that he had already set up our picnic. As we got to the table, I saw placeholders with our names on them. I got around to my side, and had to do a double-take; my placeholder didn't say "Tanya", but instead "Future Mrs. Murrow". I turned around, and he was down on one knee! I was totally surprised, but when I realized what was happening, I said yes!</p>
+    </div>
+
+  </div>
+
+</div>
+
+<!--
+{% for story in {{site.posts}} reversed %}
+<div class="event">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h3>{{story.title}}</h3>
+      <p><span class="glyphicon glyphicon-calendar"></span> {{story.event-date}}</p>
+      <p>{{story.place}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="media">
+        <div class="media-left media-middle">
+          <a href="#">
+            <img class="media-object img-circle face-small" src="{{baseurl}}/images/corbin-face.png">
+          </a>
+        </div>
+        <div class="media-body">
+          {{story.corbin}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="media">
+        <div class="media-body">
+          {{story.tanya}}
+        </div>
+        <div class="media-right media-middle">
+          <a href="#">
+            <img class="media-object img-circle face-small" src="{{baseurl}}/images/tanya-face.png">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{%endfor%} -->
+
+<!-- <div class="row">
+  <div class="col-md-12">
     <ul class="timeline">
       {% for story in {{site.posts}} reversed %}
       <li>
-        <div class="timeline-badge success"><span class="glyphicon glyphicon-heart-empty"></span></div>
         <div class="timeline-panel">
           <div class="timeline-heading">
             <h3 class="timeline-title">{{story.title}} <small class="text-muted"></small></h3>
             <p>{{story.place}}<br><small class="text-muted"><span class="glyphicon glyphicon-calendar"></span> {{story.event-date}}</small></p>
           </div>
           <div class="timeline-body">
-            <p>{{story.content}}</p>
+            <img class="img-responsive" src="{{story.image}}" />
+            {{story.content}}
           </div>
         </div>
       </li>
       {%endfor%}
+      <li class="clearfix" style="float: none;"></li>
     </ul>
-
   </div>
-</div>
+</div> -->
