@@ -14,6 +14,30 @@
   height: 72px;
 }*/
 
+.panel-default {
+  border-color: #aaa;
+  color: #fff;
+  background-color: transparent;
+}
+
+.panel-default > .panel-heading {
+  background-color: #333;
+  background-color: rgba(51,51,51,0.75);
+  color: #fff;
+  border-bottom-color: inherit;
+}
+
+.panel-default > .panel-heading > .panel-title{
+  font-weight: normal;
+  font-size: 150%;
+}
+
+.panel-default > .panel-body {
+  /*background-color: #333;*/
+  background-color: #333;
+  background-color: rgba(51,51,51,0.5);
+}
+
 .face-corbin,
 .face-tanya {
   border: 2px solid white;
@@ -425,7 +449,7 @@ body {
   background-image: linear-gradient(to right, rgba(51, 51, 51, 0), rgba(51, 51, 51, 0.85), rgba(51, 51, 51, 0));
 }
 
-.panel-title {
+.panel-map .panel-title {
   font-size: inherit;
   font-weight: bold;
 }
