@@ -171,15 +171,19 @@ body {
 }
 
 /* cover page spacer */
-@media (min-width: 768px) {
+.cover-spacer {
+  height: 50%;
+}
+
+/*@media (min-width: 768px) {
   .cover-spacer {
-    height: 50px;
+    height: 250px;
   }
 }
 
 @media (min-width: 992px) {
   .cover-spacer {
-    height: 100px;
+    height: 350px;
   }
 }
 
@@ -187,7 +191,7 @@ body {
   .cover-spacer {
     height: 350px;
   }
-}
+}*/
 
 /* other page spacer */
 @media (min-width: 768px) {
@@ -215,9 +219,17 @@ html {
   position: relative;
   min-height: 100%;
 }
+
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
+  padding-top: 50px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 0;
+  }
 }
 
 body > .container {
@@ -374,9 +386,14 @@ body {
 }
 
 .navbar-default {
-  background-color: transparent;
+  background-color: #333;
   border: 0px;
   font-size: 150%;
+}
+
+.navbar-transparent,
+.navbar-opaque {
+  background-color: #333;
 }
 
 .navbar-default .navbar-nav > .active > a,
@@ -390,7 +407,19 @@ body {
   border-bottom-color: #fff;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
+  .navbar-default {
+    background-color: transparent;
+  }
+
+  .navbar-transparent {
+    background-color: transparent;
+  }
+
+  .navbar-opaque {
+    background-color: #333;
+  }
+
   .navbar-default .navbar-nav > .active > a,
   .navbar-default .navbar-nav > .active:hover > a,
   .navbar-default .navbar-nav > .active:focus > a,
@@ -409,7 +438,7 @@ body {
   background-color: #333;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .navbar-default .navbar-nav > li > a {
     color: #fff;  /* IE8 proofing */
     color: rgba(255,255,255,.75);
@@ -436,6 +465,16 @@ body {
 .navbar-default .navbar-brand:hover {
   color: #fff;
 }
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:active,
+.navbar-default .navbar-toggle:focus {
+  color: #fff;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #444;
+  border: 1.5px solid #fff;
+}
+
 
 /*
  * Panels
@@ -494,4 +533,16 @@ Gradient: transparent - color - transparent */
   border: 0;
   height: 2px;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
+
+
+.cover-spacer {
+  height: 55%;
+}
+
+.container,
+body,
+html {
+  height: 100%;
 }

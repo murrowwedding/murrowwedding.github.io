@@ -2,18 +2,6 @@ $(document).ready(function() {
   // var map;
   // initMap();
 
-  // give navbar opaque background on scroll
-  var a = $(".navbar").offset().top;
-  $(document).scroll(function(){
-      if($(this).scrollTop() > a)
-      {
-         $('.navbar').css('background-color', 'rgba(51,51,51,1.0)');
-      } else {
-         $('.navbar').css({"background":"transparent"});
-      }
-  });
-  // -------
-
   // map initialization
   googleMapsBtn = $('.directions-google-maps');
 
@@ -54,6 +42,7 @@ $(document).ready(function() {
   $('[data-toggle="popover"]').popover();
   // -------
 
+  // fade in back to top button on scroll
   var amountScrolled = 300;
 
   $(window).scroll(function() {
@@ -65,10 +54,37 @@ $(document).ready(function() {
   });
 
   $('a.back-to-top').click(function() {
-	$('html, body').animate({
-		scrollTop: 0
-	}, 700);
-	return false;
-});
+  	$('html, body').animate({
+  		scrollTop: 0
+  	}, 700);
+  	return false;
+  });
+  // -------
+
+  // give navbar opaque background on scroll
+  // var a = $(".navbar").offset().top;
+  // $(document).scroll(function(){
+  //     if($(this).scrollTop() > a)
+  //     {
+  //        $('.navbar').css('background-color', 'rgba(51,51,51,1.0)');
+  //     } else {
+  //        $('.navbar').css({"background":"transparent"});
+  //     }
+  // });
+  var amountScrolled = 20;
+  $(window).scroll(function() {
+  	if ( $(window).scrollTop() > amountScrolled ) {
+  		// $('.navbar').css('background-color', 'rgba(51,51,51,1.0)');
+      $('.navbar').addClass('navbar-opaque');
+      $('.navbar').removeClass('navbar-transparent');
+  	} else {
+  		// $('.navbar').css({"background":"transparent"});
+      $('.navbar').addClass('navbar-transparent');
+      $('.navbar').removeClass('navbar-opaque');
+  	}
+  });
+
+  // -------
+
 
 });
