@@ -1,8 +1,5 @@
 $(document).ready(function() {
-
-  //$('#success-modal').modal('show');
-  $('#delete-modal').modal('show');
-
+  
   var confirmForm = $('#confirm-form');
   var yes = $('#rsvp-yes');
   var no = $('#rsvp-no');
