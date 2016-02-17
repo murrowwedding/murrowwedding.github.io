@@ -2,7 +2,7 @@ $(document).ready(function() {
   checkRecord();
 
   $('#submit-rsvp').click(function(){
-    writeRecord();
+    // writeRecord();
   });
 
   $('#delete-rsvp').click(function(){

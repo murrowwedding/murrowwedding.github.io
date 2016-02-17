@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  
+
   var confirmForm = $('#confirm-form');
   var yes = $('#rsvp-yes');
   var no = $('#rsvp-no');
@@ -22,6 +22,13 @@ $(document).ready(function() {
   $('#submit-rsvp').click(function(){
     rsvpValidate();
     //alert("RSVPed! Thanks.");
+  });
+
+  $('#fname').blur(function () {
+    if($('#fname').val() !== '' || $('#fname').val() !== null)
+    {
+      $('#fname-group').removeClass('has-error');
+    }
   });
 
   var receptionSome = $('#reception-some');
@@ -59,9 +66,11 @@ $(document).ready(function() {
         input.val(0);
     }
   });
+
   $('.input-number').focusin(function(){
      $(this).data('oldValue', $(this).val());
   });
+
   $('.input-number').change(function() {
 
       minValue =  parseInt($(this).attr('min'));
@@ -86,6 +95,7 @@ $(document).ready(function() {
         receptionSome.collapse('hide');
       }
   });
+
   $(".input-number").keydown(function (e) {
           // Allow: backspace, delete, tab, escape, enter and .
           if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 190]) !== -1 ||
@@ -101,7 +111,6 @@ $(document).ready(function() {
               e.preventDefault();
           }
       });
-
   //-----------------
 
 });

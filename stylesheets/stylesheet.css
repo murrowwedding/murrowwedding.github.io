@@ -57,6 +57,7 @@ img.adp-marker {
 .panel-default.panel-map {
   color: #fff;
   margin: 0;
+	margin-top: 20px;
 }
 
 .panel-default.panel-map > .panel-heading {
