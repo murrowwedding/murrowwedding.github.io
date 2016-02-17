@@ -64,8 +64,10 @@ blockquote footer{
 
 .btn-default:disabled,
 .btn-default.disabled,
- .btn-default[disabled],
- .btn-default[disabled]:hover{
+.btn-default:disabled:hover,
+.btn-default.disabled:hover,
+.btn-default[disabled],
+.btn-default[disabled]:hover {
   color: #ccc;
   text-shadow: none; /* Prevent inheritence from `body` */
   background-color: #444;
@@ -86,6 +88,42 @@ blockquote footer{
   background-color: #ddd;
   border: 1px solid #333;
 }
+
+.btn-danger {
+  color: #ccc;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #991A1A;
+  /*background-color:  #864341;*/
+  border: 1.5px solid #777;
+}
+/* #D9534F  normal: #d9534f hover: #c9302c*/
+
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger:hover:focus,
+.btn-danger:active:focus,
+.btn-danger:active:hover,
+.btn-danger.active{
+  color: #fff;
+  text-shadow: none;
+  /*background-color: #863A38;*/
+  background-color: #A22222;
+  border: 1.5px solid #fff;
+}
+
+.btn-danger:disabled,
+.btn-danger.disabled,
+.btn-danger:disabled:hover,
+.btn-danger.disabled:hover,
+.btn-danger[disabled],
+.btn-danger[disabled]:hover {
+  color: #ccc;
+  text-shadow: none;
+  background-color: #7C3C3C;
+  border: 1.5px solid #777;
+}
+
 /* ------- */
 
 /* Navbar */
