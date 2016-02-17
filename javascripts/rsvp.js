@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  
+
   var confirmForm = $('#confirm-form');
   var yes = $('#rsvp-yes');
   var no = $('#rsvp-no');
