@@ -1,0 +1,227 @@
+/* Blockquotes */
+
+blockquote {
+  border-color: #666;
+}
+
+blockquote footer{
+  color: #aaa;
+}
+/* ------- */
+
+/* Panels */
+.panel-default {
+  border-color: #aaa;
+  color: #fff;
+  background-color: transparent;
+}
+
+.panel-default > .panel-heading {
+  background-color: #333;
+  background-color: rgba(51,51,51,0.75);
+  color: #fff;
+  border-bottom-color: inherit;
+}
+
+.panel-default > .panel-heading > .panel-title{
+  font-weight: normal;
+  font-size: 150%;
+}
+
+.panel-default > .panel-body {
+  /*background-color: #333;*/
+  background-color: #333;
+  background-color: rgba(51,51,51,0.5);
+}
+/* ------- */
+
+/* Panels */
+.modal-title {
+  color: #333;
+}
+/* ------- */
+
+/* Buttons */
+.btn-default {
+  color: #ccc;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #333;
+  border: 1.5px solid #777;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default:hover:focus,
+.btn-default:active:focus,
+.btn-default:active:hover,
+.btn-default.active{
+  color: #fff;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #444;
+  border: 1.5px solid #fff;
+}
+
+.btn-default:disabled,
+.btn-default.disabled,
+ .btn-default[disabled],
+ .btn-default[disabled]:hover{
+  color: #ccc;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #444;
+  border: 1.5px solid #777;
+}
+
+.btn-primary {
+  color: #333;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #fff;
+  border: 1px solid #666;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  color: #000;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #ddd;
+  border: 1px solid #333;
+}
+/* ------- */
+
+/* Navbar */
+.navbar {
+  transition-duration: 0.25s;
+}
+
+.navbar-default {
+  background-color: #333;
+  border: 0px;
+  font-size: 150%;
+}
+
+.navbar-transparent,
+.navbar-opaque {
+  background-color: #333;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active:hover > a,
+.navbar-default .navbar-nav > .active:focus > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  background-color: #333;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .navbar-default {
+    background-color: transparent;
+  }
+
+  .navbar-transparent {
+    background-color: transparent;
+  }
+
+  .navbar-opaque {
+    background-color: #333;
+  }
+
+  .navbar-default .navbar-nav > .active > a,
+  .navbar-default .navbar-nav > .active:hover > a,
+  .navbar-default .navbar-nav > .active:focus > a,
+  .navbar-default .navbar-nav > .active > a:hover,
+  .navbar-default .navbar-nav > .active > a:focus {
+    background-color: transparent;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    border-bottom-color: #fff;
+  }
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #fff;  /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  background-color: #333;
+}
+
+@media (min-width: 768px) {
+  .navbar-default .navbar-nav > li > a {
+    color: #fff;  /* IE8 proofing */
+    color: rgba(255,255,255,.75);
+    background-color: transparent;
+    }
+  }
+
+.navbar-default .navbar-nav > li:hover > a
+.navbar-default .navbar-nav > li:focus > a,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #fff;  /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  border-bottom: 1px solid #a9a9a9;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+
+.navbar-default .navbar-brand {
+  color: #fff;
+  color: rgba(255,255,255,.75);
+  font-size: 150%;
+}
+
+.navbar-default .navbar-brand:hover {
+  color: #fff;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:active,
+.navbar-default .navbar-toggle:focus {
+  color: #fff;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #444;
+  border: 1.5px solid #fff;
+}
+
+/* ------- */
+
+/* Forms/Input */
+.form-control {
+  background-color: #333;
+  color: #ccc;
+}
+
+.form-control:hover {
+  background-color: #444;
+  color: #fff;
+  border-color: #fff;
+}
+
+.input-group-addon,
+.form-control {
+  border-color: #777;
+}
+
+.input-group-addon {
+  background-color: #555;
+  color: #bbb;
+  width: 70px;
+}
+
+.input-group {
+  width: 100%; /* Fixes width: 70px from input-group-addon */
+}
+
+.input-symbol {
+  color: #999;
+}
+
+.form-control:hover .input-symbol {
+  color: #fff;
+}
+
+.form-horizontal .form-group {
+  margin-left: 0;
+  margin-right: 0;
+}
+/* ------- */
