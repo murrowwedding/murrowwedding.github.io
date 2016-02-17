@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html class={% if {{page.title}} contains 'Murrow' %}index{%endif%}>
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -49,7 +49,7 @@
     <hr class="hr-custom">
     {% endunless %}
 
-    <div class="container">
+    <div class="container {% if {{page.title}} contains 'Murrow' %}index{%else%}container{%endif%}">
       {{content}}
     </div>
 

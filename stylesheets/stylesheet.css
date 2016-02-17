@@ -212,51 +212,6 @@ body {
   }
 }
 
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-  padding-top: 50px;
-}
-
-@media (min-width: 992px) {
-  body {
-    padding-top: 0;
-  }
-}
-
-body > .container {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  background-color: #f5f5f5;
-}
-
-.footer p {
-  margin: 20px 0;
-  text-align: center;
-}
-
-.footer > .container {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-
 /* RSVP page styles */
 
 /* Custom default button */
@@ -535,14 +490,60 @@ Gradient: transparent - color - transparent */
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
 }
 
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  padding-top: 50px;
+}
+
+body.index {
+  margin-bottom: 0;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 0;
+  }
+}
+
+body > .container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  /*background-color: #f5f5f5;*/
+}
+
+.footer p {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
 
 
 .cover-spacer {
   height: 55%;
 }
 
-.container,
-body,
-html {
+.container.index,
+body.index,
+html.index {
   height: 100%;
 }
