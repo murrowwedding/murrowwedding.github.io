@@ -11,7 +11,6 @@ $(document).ready(function() {
     localStorage.removeItem("coming");
     localStorage.removeItem("numWedding");
     localStorage.removeItem("numReception");
-    localStorage.removeItem("otherGuests");
     localStorage.removeItem("notes");
     localStorage.removeItem("date");
   });
@@ -24,7 +23,6 @@ function writeRecord()
   var areTheyComing = (($('#rsvp-yes > .glyphicon').hasClass('glyphicon-check')) ? 1 : 0);
   var numWedding = $("#numWed").val();
   var numReception = $("#numRec").val();
-  var otherGuests = $("#otherGuests").val();
   var notes = $("#notes").val();
 
   localStorage.firstName = firstName;
@@ -32,7 +30,6 @@ function writeRecord()
   localStorage.coming = areTheyComing;
   localStorage.numWedding = numWedding;
   localStorage.numReception = numReception;
-  localStorage.otherGuests = otherGuests;
   localStorage.notes = notes;
   localStorage.date = new Date();
 }
@@ -54,6 +51,8 @@ function checkRecord()
       yes.removeClass('inactive');
       no.removeClass('active');
       no.addClass('inactive');
+
+      $('#confirm-form').collapse('show');
 
       yesCheckbox.addClass('glyphicon-check');
       yesCheckbox.removeClass('glyphicon-unchecked');
@@ -78,12 +77,11 @@ function checkRecord()
     }
     $("#numWed").attr("value", localStorage.numWedding);
     $("#numRec").attr("value", localStorage.numReception);
-    $("#otherGuests").attr("placeholder", localStorage.otherGuests);
     $("#notes").attr("placeholder", localStorage.notes);
     $('#submit-rsvp').html("Update RSVP");
-    $('.delete-form').css('display','inline');
+    $('.delete-btn').removeClass('hidden');
   } else {
     $('#submit-rsvp').html("Submit RSVP");
-    $('.delete-form').css('display','none');
+    $('.delete-btn').addClass('hidden');
   }
 }

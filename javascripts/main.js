@@ -1,7 +1,4 @@
 $(document).ready(function() {
-  // var map;
-  // initMap();
-
   // map initialization
   googleMapsBtn = $('.directions-google-maps');
 
@@ -61,30 +58,17 @@ $(document).ready(function() {
   });
   // -------
 
-  // give navbar opaque background on scroll
-  // var a = $(".navbar").offset().top;
-  // $(document).scroll(function(){
-  //     if($(this).scrollTop() > a)
-  //     {
-  //        $('.navbar').css('background-color', 'rgba(51,51,51,1.0)');
-  //     } else {
-  //        $('.navbar').css({"background":"transparent"});
-  //     }
-  // });
+  // Give navbar background on scroll
   var amountScrolled = 20;
   $(window).scroll(function() {
   	if ( $(window).scrollTop() > amountScrolled ) {
-  		// $('.navbar').css('background-color', 'rgba(51,51,51,1.0)');
       $('.navbar').addClass('navbar-opaque');
       $('.navbar').removeClass('navbar-transparent');
   	} else {
-  		// $('.navbar').css({"background":"transparent"});
       $('.navbar').addClass('navbar-transparent');
       $('.navbar').removeClass('navbar-opaque');
   	}
   });
-
   // -------
-
 
 });
