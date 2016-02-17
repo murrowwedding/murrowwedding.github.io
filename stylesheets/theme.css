@@ -9,6 +9,47 @@ blockquote footer{
 }
 /* ------- */
 
+/* Modals */
+/*.modal-content {
+  background-color: #333;
+}
+
+.modal-header,
+.modal-footer {
+  border-color: #666;
+}
+
+.modal-title {
+  color: #fff;
+}*/
+.modal-title {
+  color: #333;
+}
+
+.modal-content {
+  background-color: #fff;
+  color: #333;
+}
+
+.modal-header,
+.modal-footer {
+  border-color: #e5e5e5;
+}
+
+#directionsModal .modal-title {
+  color: #333;
+}
+
+#directionsModal .modal-content {
+  background-color: #fff;
+}
+
+#directionsModal .modal-header,
+#directionsModal .modal-footer {
+  border-color: #e5e5e5;
+}
+/* ------- */
+
 /* Panels */
 .panel-default {
   border-color: #aaa;
@@ -32,12 +73,6 @@ blockquote footer{
   /*background-color: #333;*/
   background-color: #333;
   background-color: rgba(51,51,51,0.5);
-}
-/* ------- */
-
-/* Panels */
-.modal-title {
-  color: #333;
 }
 /* ------- */
 
@@ -89,7 +124,7 @@ blockquote footer{
   border: 1px solid #333;
 }
 
-.btn-danger {
+.btn-delete.btn-danger {
   color: #ccc;
   text-shadow: none; /* Prevent inheritence from `body` */
   background-color: #991A1A;
@@ -98,13 +133,13 @@ blockquote footer{
 }
 /* #D9534F  normal: #d9534f hover: #c9302c*/
 
-.btn-danger:hover,
-.btn-danger:focus,
-.btn-danger:active,
-.btn-danger:hover:focus,
-.btn-danger:active:focus,
-.btn-danger:active:hover,
-.btn-danger.active{
+.btn-delete.btn-danger:hover,
+.btn-delete.btn-danger:focus,
+.btn-delete.btn-danger:active,
+.btn-delete.btn-danger:hover:focus,
+.btn-delete.btn-danger:active:focus,
+.btn-delete.btn-danger:active:hover,
+.btn-delete.btn-danger.active{
   color: #fff;
   text-shadow: none;
   /*background-color: #863A38;*/
@@ -112,12 +147,12 @@ blockquote footer{
   border: 1.5px solid #fff;
 }
 
-.btn-danger:disabled,
-.btn-danger.disabled,
-.btn-danger:disabled:hover,
-.btn-danger.disabled:hover,
-.btn-danger[disabled],
-.btn-danger[disabled]:hover {
+.btn-delete.btn-danger:disabled,
+.btn-delete.btn-danger.disabled,
+.btn-delete.btn-danger:disabled:hover,
+.btn-delete.btn-danger.disabled:hover,
+.btn-delete.btn-danger[disabled],
+.btn-delete.btn-danger[disabled]:hover {
   color: #ccc;
   text-shadow: none;
   background-color: #7C3C3C;

@@ -79,9 +79,9 @@ function checkRecord()
     $("#numRec").attr("value", localStorage.numReception);
     $("#notes").attr("placeholder", localStorage.notes);
     $('#submit-rsvp').html("Update RSVP");
-    $('.delete-btn').removeClass('hidden');
+    $('#delete-btn').removeClass('hidden');
   } else {
     $('#submit-rsvp').html("Submit RSVP");
-    $('.delete-btn').addClass('hidden');
+    $('#delete-btn').addClass('hidden');
   }
 }

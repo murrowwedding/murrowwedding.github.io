@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+  //$('#success-modal').modal('show');
+  $('#delete-modal').modal('show');
+
   var confirmForm = $('#confirm-form');
   var yes = $('#rsvp-yes');
   var no = $('#rsvp-no');
@@ -21,7 +24,7 @@ $(document).ready(function() {
 
   $('#submit-rsvp').click(function(){
     rsvpValidate();
-    alert("RSVPed! Thanks.");
+    //alert("RSVPed! Thanks.");
   });
 
   var receptionSome = $('#reception-some');
