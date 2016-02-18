@@ -74,8 +74,6 @@ img.adp-marker {
   font-weight: bold;
 }
 
-
-
 /* ----- */
 
 .registry-img {
@@ -83,13 +81,14 @@ img.adp-marker {
   margin-right: auto;
   padding: 20px;
   border: 0px;
+	max-width: 450px;
+	width: 100%;
 }
 
 .registry-img:hover {
   border-bottom: 2px solid #fff;
   border-bottom-color: rgba(255,255,255,.25);
 }
-
 
 /* Header font centering */
 
