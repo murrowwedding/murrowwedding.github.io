@@ -23,6 +23,7 @@ $(document).ready(function() {
     rsvpValidate();
   });
 
+  // validate for submit
   $('#fname').keypress(function() {
     rsvpValidate();
   });
@@ -37,6 +38,15 @@ $(document).ready(function() {
 
   $('#lname').blur(function() {
     rsvpValidate();
+  });
+
+  // validate for update button
+  $('#notes').keypress(function() {
+    rsvpUpdateValidate();
+  });
+
+  $('#notes').blur(function() {
+    rsvpUpdateValidate();
   });
 
   // Number input code
@@ -81,22 +91,23 @@ $(document).ready(function() {
   });
 
   $('.input-number').change(function() {
+    rsvpUpdateValidate();
 
-      minValue =  parseInt($(this).attr('min'));
-      maxValue =  parseInt($(this).attr('max'));
-      valueCurrent = parseInt($(this).val());
+    minValue =  parseInt($(this).attr('min'));
+    maxValue =  parseInt($(this).attr('max'));
+    valueCurrent = parseInt($(this).val());
 
-      name = $(this).attr('name');
-      if(valueCurrent >= minValue) {
-          $(".btn-number[data-type='minus'][data-field='"+name+"']").removeAttr('disabled')
-      } else {
-          $(this).val($(this).data('oldValue'));
-      }
-      if(valueCurrent <= maxValue) {
-          $(".btn-number[data-type='plus'][data-field='"+name+"']").removeAttr('disabled')
-      } else {
-          $(this).val($(this).data('oldValue'));
-      }
+    name = $(this).attr('name');
+    if(valueCurrent >= minValue) {
+        $(".btn-number[data-type='minus'][data-field='"+name+"']").removeAttr('disabled')
+    } else {
+        $(this).val($(this).data('oldValue'));
+    }
+    if(valueCurrent <= maxValue) {
+        $(".btn-number[data-type='plus'][data-field='"+name+"']").removeAttr('disabled')
+    } else {
+        $(this).val($(this).data('oldValue'));
+    }
   });
 
   $(".input-number").keydown(function (e) {
@@ -157,5 +168,12 @@ function rsvpValidate()
   }
   else {
     $('#submit-rsvp').prop('disabled', true);
+  }
+}
+
+function rsvpUpdateValidate() {
+  if($('#submit-rsvp').html() == 'Update RSVP')
+  {
+    rsvpValidate();
   }
 }

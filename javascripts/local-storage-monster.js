@@ -77,7 +77,7 @@ function checkRecord()
     }
     $("#numWed").attr("value", localStorage.numWedding).change();
     $("#numRec").attr("value", localStorage.numReception).change();
-    $("#notes").attr("value", localStorage.notes);
+    $("#notes").val(localStorage.notes);
     $('#submit-rsvp').html("Update RSVP");
     $('#submit-rsvp').attr("data-target", "#update-modal");
     $('#delete-btn').removeClass('hidden');
