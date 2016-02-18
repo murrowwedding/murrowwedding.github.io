@@ -79,9 +79,11 @@ function checkRecord()
     $("#numRec").attr("value", localStorage.numReception).change();
     $("#notes").attr("value", localStorage.notes);
     $('#submit-rsvp').html("Update RSVP");
+    $('#submit-rsvp').attr("data-target", "#update-modal");
     $('#delete-btn').removeClass('hidden');
   } else {
     $('#submit-rsvp').html("Submit RSVP");
+    $('#submit-rsvp').attr("data-target", "#success-modal");
     $('#delete-btn').addClass('hidden');
   }
 }
