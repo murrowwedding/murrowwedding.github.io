@@ -8,9 +8,6 @@ $(document).ready(function() {
 
   // toggle yes checkbox/button
   $('#rsvp-yes').click(function() {
-    // // validate yes/no
-    // yes.removeClass('rsvp-error');
-    // no.removeClass('rsvp-error');
     confirmForm.collapse('show');
     rsvpToggle(yes, no, yesCheckbox, noCheckbox);
     rsvpValidate();
@@ -18,9 +15,6 @@ $(document).ready(function() {
 
   // toggle no checkbox/button
   $('#rsvp-no').click(function() {
-    // // validate yes/no
-    // yes.removeClass('rsvp-error');
-    // no.removeClass('rsvp-error');
     if(confirmForm.hasClass('in'))
     {
       confirmForm.collapse('hide');
@@ -44,27 +38,6 @@ $(document).ready(function() {
   $('#lname').blur(function() {
     rsvpValidate();
   });
-
-  // // validate on submit click
-  // $('#submit-rsvp').click(function(){
-  //   rsvpValidate();
-  // });
-
-  // // validate first name on blur
-  // $('#fname').blur(function () {
-  //   if($('#fname').val() !== '' || $('#fname').val() !== null)
-  //   {
-  //     $('#fname-group').removeClass('has-error');
-  //   }
-  // });
-  //
-  // // validate last name on blur
-  // $('#lname').blur(function () {
-  //   if($('#lname').val() !== '' || $('#lname').val() !== null)
-  //   {
-  //     $('#lname-group').removeClass('has-error');
-  //   }
-  // });
 
   // Number input code
   $('.btn-number').click(function(e){
@@ -93,6 +66,10 @@ $(document).ready(function() {
                 $(this).attr('disabled', true);
             }
 
+        }
+        if(fieldName == 'quant[1]')
+        {
+          $("input[name='quant[2]']").val(input.val()).change();
         }
     } else {
         input.val(0);
@@ -158,35 +135,20 @@ function rsvpValidate()
   var isValid = true;
   if($('#fname').val() === '' || $('#fname').val() === null)
   {
-    //$('#fname-group').addClass('has-error');
     isValid = false;
-    //alert('fname is blank');
   }
-  // else
-  // {
-  //   // $('#fname-group').removeClass('has-error');
-  // }
 
   if($('#lname').val() === '' || $('#lname').val() === null)
   {
-    //$('#lname-group').addClass('has-error');
     isValid = false;
-    //alert('lname is blank');
   }
-  // else
-  // {
-  //   //$('#lname-group').removeClass('has-error');
-  // }
 
   var yes = $('#rsvp-yes');
   var no = $('#rsvp-no');
 
   if(yes.hasClass('inactive') && no.hasClass('inactive'))
   {
-    //yes.addClass('rsvp-error');
-    //no.addClass('rsvp-error');
     isValid = false;
-    //alert('not checked');
   }
 
   if(isValid)

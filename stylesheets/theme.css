@@ -312,10 +312,4 @@ div {
   background-color: transparent;
   box-shadow: none;
 }
-
-/* Validation */
-#rsvp-yes.rsvp-error,
-#rsvp-no.rsvp-error {
-  color: #f00;
-}
 /* ------- */
