@@ -38,8 +38,8 @@ function checkRecord()
 {
   if (localStorage.firstName)
   {
-    $("#fname").attr("placeholder", localStorage.firstName);
-    $("#lname").attr("placeholder", localStorage.lastName);
+    $("#fname").attr("value", localStorage.firstName);
+    $("#lname").attr("value", localStorage.lastName);
     if (localStorage.coming==1)
     {
       var yes = $('#rsvp-yes');
@@ -75,9 +75,9 @@ function checkRecord()
       yesCheckbox.addClass('glyphicon-unchecked');
       yesCheckbox.removeClass('glyphicon-check');
     }
-    $("#numWed").attr("value", localStorage.numWedding);
-    $("#numRec").attr("value", localStorage.numReception);
-    $("#notes").attr("placeholder", localStorage.notes);
+    $("#numWed").attr("value", localStorage.numWedding).change();
+    $("#numRec").attr("value", localStorage.numReception).change();
+    $("#notes").attr("value", localStorage.notes);
     $('#submit-rsvp').html("Update RSVP");
     $('#delete-btn').removeClass('hidden');
   } else {
