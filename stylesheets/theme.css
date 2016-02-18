@@ -9,19 +9,13 @@ blockquote footer{
 }
 /* ------- */
 
+/* Divs */
+div {
+  text-shadow: none;
+}
+/* ------- */
+
 /* Modals */
-/*.modal-content {
-  background-color: #333;
-}
-
-.modal-header,
-.modal-footer {
-  border-color: #666;
-}
-
-.modal-title {
-  color: #fff;
-}*/
 .modal-title {
   color: #333;
 }
@@ -296,5 +290,32 @@ blockquote footer{
 .form-horizontal .form-group {
   margin-left: 0;
   margin-right: 0;
+}
+/* ------- */
+
+/* RSVP page styles */
+
+/* Styling yes/no RSVP checkboxes */
+#rsvp-yes,
+#rsvp-no {
+  color: #ccc;
+  border: none;
+  background-color: transparent;
+}
+
+#rsvp-yes.active,
+#rsvp-no.active,
+#rsvp-yes:hover,
+#rsvp-no:hover {
+  color: #fff;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Validation */
+#rsvp-yes.rsvp-error,
+#rsvp-no.rsvp-error {
+  color: #f00;
 }
 /* ------- */

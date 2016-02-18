@@ -6,35 +6,67 @@ $(document).ready(function() {
   var yesCheckbox = $('#rsvp-yes > .glyphicon');
   var noCheckbox = $('#rsvp-no > .glyphicon');
 
+  // toggle yes checkbox/button
   $('#rsvp-yes').click(function() {
+    // // validate yes/no
+    // yes.removeClass('rsvp-error');
+    // no.removeClass('rsvp-error');
     confirmForm.collapse('show');
     rsvpToggle(yes, no, yesCheckbox, noCheckbox);
+    rsvpValidate();
   });
 
+  // toggle no checkbox/button
   $('#rsvp-no').click(function() {
+    // // validate yes/no
+    // yes.removeClass('rsvp-error');
+    // no.removeClass('rsvp-error');
     if(confirmForm.hasClass('in'))
     {
       confirmForm.collapse('hide');
     }
     rsvpToggle(no, yes, noCheckbox, yesCheckbox);
-  });
-
-  $('#submit-rsvp').click(function(){
     rsvpValidate();
-    //alert("RSVPed! Thanks.");
   });
 
-  $('#fname').blur(function () {
-    if($('#fname').val() !== '' || $('#fname').val() !== null)
-    {
-      $('#fname-group').removeClass('has-error');
-    }
+  $('#fname').keypress(function() {
+    rsvpValidate();
   });
 
-  var receptionSome = $('#reception-some');
+  $('#lname').keypress(function() {
+    rsvpValidate();
+  });
+
+  $('#fname').blur(function() {
+    rsvpValidate();
+  });
+
+  $('#lname').blur(function() {
+    rsvpValidate();
+  });
+
+  // // validate on submit click
+  // $('#submit-rsvp').click(function(){
+  //   rsvpValidate();
+  // });
+
+  // // validate first name on blur
+  // $('#fname').blur(function () {
+  //   if($('#fname').val() !== '' || $('#fname').val() !== null)
+  //   {
+  //     $('#fname-group').removeClass('has-error');
+  //   }
+  // });
+  //
+  // // validate last name on blur
+  // $('#lname').blur(function () {
+  //   if($('#lname').val() !== '' || $('#lname').val() !== null)
+  //   {
+  //     $('#lname-group').removeClass('has-error');
+  //   }
+  // });
 
   // Number input code
-
   $('.btn-number').click(function(e){
     e.preventDefault();
 
@@ -88,12 +120,6 @@ $(document).ready(function() {
       } else {
           $(this).val($(this).data('oldValue'));
       }
-      if(valueCurrent > 1) {
-        receptionSome.collapse('show');
-      }
-      else {
-        receptionSome.collapse('hide');
-      }
   });
 
   $(".input-number").keydown(function (e) {
@@ -129,12 +155,45 @@ function rsvpToggle(activate, deactivate, activateCheckbox, deactivateCheckbox) 
 
 function rsvpValidate()
 {
+  var isValid = true;
   if($('#fname').val() === '' || $('#fname').val() === null)
   {
-    $('#fname-group').addClass('has-error');
+    //$('#fname-group').addClass('has-error');
+    isValid = false;
+    //alert('fname is blank');
   }
-  else
+  // else
+  // {
+  //   // $('#fname-group').removeClass('has-error');
+  // }
+
+  if($('#lname').val() === '' || $('#lname').val() === null)
   {
-    $('#fname-group').removeClass('has-error');
+    //$('#lname-group').addClass('has-error');
+    isValid = false;
+    //alert('lname is blank');
+  }
+  // else
+  // {
+  //   //$('#lname-group').removeClass('has-error');
+  // }
+
+  var yes = $('#rsvp-yes');
+  var no = $('#rsvp-no');
+
+  if(yes.hasClass('inactive') && no.hasClass('inactive'))
+  {
+    //yes.addClass('rsvp-error');
+    //no.addClass('rsvp-error');
+    isValid = false;
+    //alert('not checked');
+  }
+
+  if(isValid)
+  {
+    $('#submit-rsvp').prop('disabled', false);
+  }
+  else {
+    $('#submit-rsvp').prop('disabled', true);
   }
 }
