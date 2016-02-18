@@ -15,6 +15,25 @@ a.back-to-top {
 
 /* Other */
 
+/*.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}*/
+
+.truncate {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.truncate > * {
+    display: table-cell;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .text-fluid {
   text-align: center;
 }
