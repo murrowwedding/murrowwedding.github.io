@@ -14,6 +14,7 @@ $(document).ready(function() {
   });
 
   $('#delete-rsvp').click(function(){
+    deleteTheMail();
     localStorage.removeItem("firstName");
     localStorage.removeItem("lastName");
     localStorage.removeItem("coming");
@@ -21,7 +22,6 @@ $(document).ready(function() {
     localStorage.removeItem("numReception");
     localStorage.removeItem("notes");
     localStorage.removeItem("date");
-    deleteTheMail();
   });
 });
 
