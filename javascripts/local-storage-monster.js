@@ -2,7 +2,15 @@ $(document).ready(function() {
   checkRecord();
 
   $('#submit-rsvp').click(function(){
+    if($(this).html() == 'Submit RSVP')
+    {
+      sendTheMail();
+    }
+    else {
+      updateTheMail();
+    }
     writeRecord();
+    //sendTheMail();
   });
 
   $('#delete-rsvp').click(function(){
@@ -13,6 +21,7 @@ $(document).ready(function() {
     localStorage.removeItem("numReception");
     localStorage.removeItem("notes");
     localStorage.removeItem("date");
+    deleteTheMail();
   });
 });
 
