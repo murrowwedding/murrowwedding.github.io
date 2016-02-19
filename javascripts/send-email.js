@@ -90,9 +90,9 @@ function deleteTheMail() {
 }
 
 function rsvpSuccess() {
-  alert("success");
+  //alert("success");
 }
 
 function rsvpFail() {
-  alert("fail");
+  //alert("fail");
 }
