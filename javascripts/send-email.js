@@ -18,7 +18,6 @@ function sendTheMail() {
   var name = fname + ' ' + lname;
 
   var msg = 'Name: ' + name + '\nComing: ' + (areTheyComing ? 'Yes' : 'No') + '\nWedding: ' + numWed + '\nReception: ' + numRec + '\nNotes: ' + notes;
-  //var msg = lname + ', ' + fname + (areTheyComing ? ', coming' : ', not coming') + ', wedding: ' + numWed + ', reception: ' + numRec + ', ' + notes;
 
   // create a variable for the API call parameters
   var params = {

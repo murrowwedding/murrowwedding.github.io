@@ -10,7 +10,6 @@ $(document).ready(function() {
       updateTheMail();
     }
     writeRecord();
-    //sendTheMail();
   });
 
   $('#delete-rsvp').click(function(){
