@@ -15,13 +15,7 @@ $(document).ready(function() {
 
   $('#delete-rsvp').click(function(){
     deleteTheMail();
-    localStorage.removeItem("firstName");
-    localStorage.removeItem("lastName");
-    localStorage.removeItem("coming");
-    localStorage.removeItem("numWedding");
-    localStorage.removeItem("numReception");
-    localStorage.removeItem("notes");
-    localStorage.removeItem("date");
+    removeRecord();
   });
 });
 
@@ -41,6 +35,16 @@ function writeRecord()
   localStorage.numReception = numReception;
   localStorage.notes = notes;
   localStorage.date = new Date();
+}
+
+function removeRecord() {
+  localStorage.removeItem("firstName");
+  localStorage.removeItem("lastName");
+  localStorage.removeItem("coming");
+  localStorage.removeItem("numWedding");
+  localStorage.removeItem("numReception");
+  localStorage.removeItem("notes");
+  localStorage.removeItem("date");
 }
 
 function checkRecord()
@@ -89,10 +93,10 @@ function checkRecord()
     $("#notes").val(localStorage.notes);
     $('#submit-rsvp').html("Update RSVP");
     $('#submit-rsvp').attr("data-target", "#update-modal");
-    $('#delete-btn').removeClass('hidden');
+    $('#delete-rsvp').removeClass('hidden');
   } else {
     $('#submit-rsvp').html("Submit RSVP");
     $('#submit-rsvp').attr("data-target", "#success-modal");
-    $('#delete-btn').addClass('hidden');
+    $('#delete-rsvp').addClass('hidden');
   }
 }
